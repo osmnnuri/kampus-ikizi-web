@@ -1,0 +1,162 @@
+{
+ "binalar": {
+  "b375447694": [
+   263.34,
+   19.8,
+   70.69
+  ],
+  "b375447696": [
+   253.88,
+   19.8,
+   -21.54
+  ],
+  "b375738733": [
+   207.43,
+   23.6,
+   -138.07
+  ],
+  "eczacilik": [
+   32.88,
+   19.8,
+   106.97
+  ],
+  "saglik_bilimleri": [
+   107.22,
+   19.8,
+   -31.36
+  ],
+  "dis_hekimligi": [
+   0.0,
+   28.75,
+   -0.0
+  ],
+  "dis_konferans": [
+   34.61,
+   16.0,
+   11.35
+  ]
+ },
+ "yolNoktalari": [
+  {
+   "id": "b1_yol1",
+   "ad": "Diş Hekimliği yolu (1)",
+   "konum": [
+    -43.33,
+    1.5,
+    -11.77
+   ],
+   "drenajZayif": false,
+   "anaYol": true
+  },
+  {
+   "id": "b1_yol2",
+   "ad": "Diş Hekimliği yolu (2)",
+   "konum": [
+    4.31,
+    1.5,
+    66.27
+   ],
+   "drenajZayif": true,
+   "anaYol": false
+  },
+  {
+   "id": "b1_yol3",
+   "ad": "Diş Hekimliği yolu (3)",
+   "konum": [
+    -56.68,
+    1.5,
+    56.94
+   ],
+   "drenajZayif": false,
+   "anaYol": true
+  },
+  {
+   "id": "b1_yol4",
+   "ad": "Diş Hekimliği yolu (4)",
+   "konum": [
+    -29.99,
+    1.5,
+    -80.49
+   ],
+   "drenajZayif": false,
+   "anaYol": true
+  },
+  {
+   "id": "b1_yol5",
+   "ad": "Sağlık Bilimleri yolu (5)",
+   "konum": [
+    98.4,
+    1.5,
+    9.98
+   ],
+   "drenajZayif": true,
+   "anaYol": false
+  },
+  {
+   "id": "b1_yol6",
+   "ad": "Eczacılık yolu (6)",
+   "konum": [
+    74.31,
+    1.5,
+    65.81
+   ],
+   "drenajZayif": false,
+   "anaYol": false
+  },
+  {
+   "id": "b1_yol7",
+   "ad": "Diş Hekimliği yolu (7)",
+   "konum": [
+    -31.85,
+    1.5,
+    -126.32
+   ],
+   "drenajZayif": false,
+   "anaYol": true
+  },
+  {
+   "id": "b1_yol8",
+   "ad": "Eczacılık yolu (8)",
+   "konum": [
+    -70.02,
+    1.5,
+    125.66
+   ],
+   "drenajZayif": true,
+   "anaYol": true
+  },
+  {
+   "id": "b1_yol9",
+   "ad": "Sağlık Bilimleri yolu (9)",
+   "konum": [
+    143.72,
+    1.5,
+    13.6
+   ],
+   "drenajZayif": false,
+   "anaYol": false
+  },
+  {
+   "id": "b1_yol10",
+   "ad": "Sağlık Bilimleri yolu (10)",
+   "konum": [
+    60.65,
+    1.5,
+    -159.31
+   ],
+   "drenajZayif": false,
+   "anaYol": true
+  }
+ ],
+ "poi": [],
+ "diger": {
+  "d0": {
+   "ad": "Bina",
+   "konum": [
+    -178.29,
+    13.0,
+    -218.5
+   ]
+  }
+ }
+}

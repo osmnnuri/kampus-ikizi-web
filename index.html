@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <!-- flutter build web --base-href /alt/klasor/ ile değiştirilir -->
+  <base href="/kampus-ikizi-web/">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="description" content="İnönü Üniversitesi yeşil kampüs dijital ikizi: 3B kampüs, karbon ve sürdürülebilirlik simülasyonu (COP31).">
+  <meta name="theme-color" content="#1B3A6B">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="Kampüs İkizi">
+  <link rel="apple-touch-icon" href="icons/Icon-192.png">
+  <link rel="icon" type="image/png" href="favicon.png"/>
+  <title>İnönü Kampüs İkizi</title>
+  <link rel="manifest" href="manifest.json">
+  <style>
+    html, body { margin: 0; height: 100%; background: #16263f; }
+    #yukleniyor { position: fixed; inset: 0; display: grid; place-content: center; gap: 14px; justify-items: center;
+      color: #aebbd0; font: 500 15px system-ui, sans-serif; }
+    #yukleniyor i { width: 34px; height: 34px; border-radius: 50%; border: 3px solid #2e4566; border-top-color: #5fdccb;
+      animation: don 0.9s linear infinite; }
+    @keyframes don { to { transform: rotate(360deg); } }
+    @media (prefers-reduced-motion: reduce) { #yukleniyor i { animation: none; } }
+  </style>
+</head>
+<body>
+  <div id="yukleniyor"><i></i>Kampüs ikizi yükleniyor</div>
+  <script>
+    // Eski sürümlerin kurduğu Flutter service worker'ı ve önbelleği kaldırılır (güncel ikiz verisini gizliyordu);
+    // sayfa hâlâ onun denetimindeyse bir kez yenilenir
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.getRegistrations().then(async (kayitlar) => {
+        if (!kayitlar.length) return;
+        await Promise.all(kayitlar.map((k) => k.unregister()));
+        if (window.caches) for (const ad of await caches.keys()) await caches.delete(ad);
+        if (navigator.serviceWorker.controller) location.reload();
+      }).catch(() => {});
+    }
+    // Flutter ilk kareyi çizince yükleniyor ekranı kalkar
+    window.addEventListener('flutter-first-frame', () => document.getElementById('yukleniyor')?.remove());
+  </script>
+  <script src="flutter_bootstrap.js" async></script>
+</body>
+</html>

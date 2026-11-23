@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+<title>İnönü Kampüs İkizi</title>
+<link rel="stylesheet" href="vendor/maplibre-gl.css">
+<link rel="stylesheet" href="ikiz.css">
+</head>
+<body>
+<div id="harita" aria-label="Kampüsün üç boyutlu haritası"></div>
+
+<header class="ust">
+  <div class="marka cam">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 20h18M5 20V9l7-5 7 5v11M10 20v-6h4v6"/></svg>
+    <span>İnönü Kampüs İkizi</span>
+  </div>
+  <div class="arama cam" role="search">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="6.5"/><path d="m16 16 4.5 4.5"/></svg>
+    <input id="ara" type="search" placeholder="Fakülte, yurt, kafe ara" autocomplete="off" aria-label="Kampüste yer ara">
+    <ul id="sonuclar" hidden></ul>
+  </div>
+  <div class="sag">
+    <div id="gunesRozet" class="gunes-rozet cam" role="status" hidden>
+      <span class="gunes-ok" aria-hidden="true"><b></b></span>
+      <span id="gunesSimge" aria-hidden="true">☀️</span>
+      <strong id="gunesSaat">09:00</strong>
+      <small id="gunesYazi"></small>
+    </div>
+    <button id="dilDug" class="dil cam" type="button" aria-label="Switch to English">EN</button>
+    <label class="gece cam">
+      <span>Gece modu</span>
+      <input id="geceSec" type="checkbox" role="switch">
+      <i aria-hidden="true"></i>
+    </label>
+  </div>
+</header>
+
+<nav class="kontroller" aria-label="Harita denetimleri">
+  <button id="yakin" class="cam" aria-label="Yakınlaştır"><svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg></button>
+  <button id="uzak" class="cam" aria-label="Uzaklaştır"><svg viewBox="0 0 24 24"><path d="M5 12h14"/></svg></button>
+  <button id="pusula" class="cam" aria-label="Kuzeye döndür"><svg id="igne" viewBox="0 0 24 24"><path class="kuzey" d="m12 3 3.6 9H8.400z"/><path d="m12 21-3.600-9h7.200z"/></svg></button>
+  <button id="dondur" class="cam" aria-label="Otomatik döndür" aria-pressed="false"><svg viewBox="0 0 24 24"><path d="M20 12a8 8 0 1 1-2.500-5.800M20 3v4h-4"/></svg></button>
+  <button id="katmanDug" class="cam" aria-label="Katmanlar" aria-expanded="false"><svg viewBox="0 0 24 24"><path d="m12 4 9 5-9 5-9-5zM3 14l9 5 9-5"/></svg></button>
+  <div id="katmanlar" class="cam" hidden>
+    <label><input type="checkbox" id="kCephe"> Cephe durumu</label>
+    <label><input type="checkbox" id="kKarbon"> Karbon yoğunluğu</label>
+    <label><input type="checkbox" id="kYol" checked> Yol noktaları</label>
+    <label><input type="checkbox" id="kBolge" checked> Bölgeler</label>
+    <label><input type="checkbox" id="kEtiket" checked> Yer adları</label>
+    <label><input type="checkbox" id="kBina" checked> 3B binalar</label>
+    <label><input type="checkbox" id="kAgac" checked> Ağaçlar</label>
+    <label><input type="checkbox" id="kCevre"> Kampüs çevresi</label>
+    <div id="lejant" hidden>
+      <span><i style="background:var(--saglam)"></i>Sağlam</span>
+      <span><i style="background:var(--yenilenmeli)"></i>Yenilenmeli</span>
+      <span><i style="background:var(--asinmis)"></i>Aşınmış</span>
+    </div>
+    <div id="lejantKarbon" hidden>
+      <span class="rampa"><i></i></span>
+      <span class="uclar"><small id="kMin"></small><small>kg CO₂e/m²·yıl</small><small id="kMax"></small></span>
+    </div>
+  </div>
+</nav>
+
+<p id="ipucu" class="ipucu cam">Sağ tıkla sürükleyerek 360° döndürün</p>
+<p id="uyari" class="uyari" role="alert" hidden></p>
+<aside id="durum" class="durum" hidden aria-live="polite">
+  <div id="durumLejant"></div>
+  <ul id="projeler"></ul>
+</aside>
+
+<section id="kart" class="kart cam" hidden aria-live="polite">
+  <button id="kartKapat" aria-label="Kartı kapat"><svg viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18"/></svg></button>
+  <h2 id="kartAd"></h2>
+  <p id="kartTur"></p>
+  <dl id="kartBilgi"></dl>
+  <div id="kartEylem" hidden>
+    <button id="kartAc">Detaylar ve işlemler</button>
+    <button id="kartYol"></button>
+  </div>
+</section>
+
+<div class="alt-sol">
+  <div class="hud"><span id="hKonum"></span><span id="hZoom"></span><span id="hFps" hidden></span><span id="hDpr" hidden></span></div>
+</div>
+
+<div id="mini" class="mini" role="button" aria-label="Kampüs genel haritası, dokunduğunuz yere gider"></div>
+
+<script>
+// Dosyalar önce sunucuya sorularak tazelenir (değişmediyse 304, yeniden inmez), sonra sırayla yüklenir: tarayıcı
+// önbelleği eski veri.js/ikiz.js'i (bina adları, girişler) vermesin. Telefonda (uygulama içi dosya) sorma atlanır.
+(async () => {
+  const stiller = ['vendor/maplibre-gl.css', 'ikiz.css'];
+  const betikler = ['vendor/maplibre-gl.js', 'veri.js', 'yol_noktalari.js', 'modeller.js', 'agaclar.js', 'adlar.js', 'ikiz.js'];
+  if (/^https?:$/.test(location.protocol)) {
+    await Promise.all([...stiller, ...betikler].map((u) => fetch(u, { cache: 'no-cache' }).catch(() => {})));
+    for (const u of stiller) {
+      const l = document.querySelector(`link[href="${u}"]`);
+      if (l) l.href = u + '?t=' + Date.now();   // stil tazelendiyse yeniden uygula
+    }
+  }
+  for (const u of betikler) {
+    await new Promise((tamam) => {
+      const s = document.createElement('script');
+      s.src = u;
+      s.onload = s.onerror = tamam;
+      document.body.append(s);
+      if (u === 'ikiz.js') s.onerror = () => {   // ikiz.js hiç inmezse uyarıyı sayfa yazar
+        const p = document.getElementById('uyari');
+        p.hidden = false;
+        p.textContent = 'Harita dosyaları yüklenemedi / The map files failed to load.';
+        tamam();
+      };
+    });
+  }
+})().catch((e) => console.error('ikiz: yükleme', e));   // eksik betiği ikiz.js kendisi bildirir
+</script>
+</body>
+</html>

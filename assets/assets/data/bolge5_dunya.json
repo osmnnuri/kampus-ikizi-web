@@ -1,0 +1,261 @@
+{
+ "binalar": {
+  "b375447699": [
+   33.12,
+   19.8,
+   -192.33
+  ],
+  "b375603103": [
+   -34.13,
+   19.8,
+   42.35
+  ],
+  "b375603104": [
+   28.14,
+   19.8,
+   37.67
+  ],
+  "b375738734": [
+   93.69,
+   19.8,
+   -36.3
+  ],
+  "b1008734068": [
+   -120.84,
+   19.8,
+   148.6
+  ],
+  "esenlik_yemekhane": [
+   199.74,
+   12.2,
+   94.06
+  ]
+ },
+ "yolNoktalari": [
+  {
+   "id": "b5_yol1",
+   "ad": "Eğitim-B Blok (1) yolu (1)",
+   "konum": [
+    -72.58,
+    1.5,
+    -18.35
+   ],
+   "drenajZayif": false,
+   "anaYol": false
+  },
+  {
+   "id": "b5_yol2",
+   "ad": "Eğitim-B Blok (2) yolu (2)",
+   "konum": [
+    38.39,
+    1.5,
+    88.72
+   ],
+   "drenajZayif": true,
+   "anaYol": false
+  },
+  {
+   "id": "b5_yol3",
+   "ad": "Eğitim-B Blok (1) yolu (3)",
+   "konum": [
+    -138.94,
+    1.5,
+    -40.61
+   ],
+   "drenajZayif": true,
+   "anaYol": false
+  },
+  {
+   "id": "b5_yol4",
+   "ad": "Eğitim-B Blok (2) yolu (4)",
+   "konum": [
+    89.37,
+    1.5,
+    115.12
+   ],
+   "drenajZayif": false,
+   "anaYol": true
+  },
+  {
+   "id": "b5_yol5",
+   "ad": "Eğitim-C Blok yolu (5)",
+   "konum": [
+    101.29,
+    1.5,
+    -110.34
+   ],
+   "drenajZayif": true,
+   "anaYol": false
+  },
+  {
+   "id": "b5_yol6",
+   "ad": "Hukuk ve İletişim yolu (6)",
+   "konum": [
+    65.83,
+    1.5,
+    -143.74
+   ],
+   "drenajZayif": false,
+   "anaYol": false
+  },
+  {
+   "id": "b5_yol7",
+   "ad": "Öğrenci İşleri yolu (7)",
+   "konum": [
+    32.99,
+    1.5,
+    156.6
+   ],
+   "drenajZayif": false,
+   "anaYol": true
+  },
+  {
+   "id": "b5_yol8",
+   "ad": "Esenlik Yemekhanesi yolu (8)",
+   "konum": [
+    144.74,
+    1.5,
+    72.3
+   ],
+   "drenajZayif": true,
+   "anaYol": true
+  },
+  {
+   "id": "b5_yol9",
+   "ad": "Hukuk ve İletişim yolu (9)",
+   "konum": [
+    -16.52,
+    1.5,
+    -172.87
+   ],
+   "drenajZayif": false,
+   "anaYol": false
+  },
+  {
+   "id": "b5_yol10",
+   "ad": "Öğrenci İşleri yolu (10)",
+   "konum": [
+    -175.44,
+    1.5,
+    31.55
+   ],
+   "drenajZayif": true,
+   "anaYol": false
+  }
+ ],
+ "poi": [],
+ "diger": {
+  "d0": {
+   "ad": "BESYO Kapalı Spor Salonu",
+   "konum": [
+    156.81,
+    13.0,
+    -220.37
+   ]
+  },
+  "d1": {
+   "ad": "Çardak Kafe",
+   "konum": [
+    -219.06,
+    13.0,
+    -14.01
+   ]
+  },
+  "d2": {
+   "ad": "Bina",
+   "konum": [
+    34.56,
+    13.0,
+    251.65
+   ]
+  },
+  "d3": {
+   "ad": "Bina",
+   "konum": [
+    -7.58,
+    9.8,
+    283.15
+   ]
+  },
+  "d4": {
+   "ad": "Bina",
+   "konum": [
+    156.48,
+    13.0,
+    204.05
+   ]
+  },
+  "d5": {
+   "ad": "Lojman",
+   "konum": [
+    108.33,
+    9.8,
+    213.48
+   ]
+  },
+  "d6": {
+   "ad": "Bina",
+   "konum": [
+    14.93,
+    13.0,
+    -98.99
+   ]
+  },
+  "d7": {
+   "ad": "Lojman",
+   "konum": [
+    -11.41,
+    9.8,
+    -57.71
+   ]
+  },
+  "d8": {
+   "ad": "Lojman",
+   "konum": [
+    232.37,
+    9.8,
+    -48.33
+   ]
+  },
+  "d9": {
+   "ad": "Lojman",
+   "konum": [
+    259.7,
+    9.8,
+    -58.88
+   ]
+  },
+  "d10": {
+   "ad": "Bina",
+   "konum": [
+    228.4,
+    13.0,
+    -74.24
+   ]
+  },
+  "d11": {
+   "ad": "Lojman",
+   "konum": [
+    261.46,
+    9.8,
+    -76.79
+   ]
+  },
+  "d12": {
+   "ad": "Lojman",
+   "konum": [
+    195.79,
+    9.8,
+    -103.75
+   ]
+  },
+  "d13": {
+   "ad": "Bina",
+   "konum": [
+    170.31,
+    9.8,
+    -149.98
+   ]
+  }
+ }
+}

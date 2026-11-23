@@ -1,0 +1,216 @@
+{
+ "binalar": {
+  "b375738737": [
+   172.36,
+   16.0,
+   103.07
+  ],
+  "b375738738": [
+   60.51,
+   16.0,
+   40.88
+  ],
+  "b375738746": [
+   99.76,
+   16.0,
+   69.64
+  ],
+  "b397955978": [
+   -187.29,
+   19.8,
+   -70.24
+  ],
+  "b1389212554": [
+   -145.36,
+   16.0,
+   -143.36
+  ]
+ },
+ "yolNoktalari": [
+  {
+   "id": "b3_yol1",
+   "ad": "Yeni Rektörlük Binası yolu (1)",
+   "konum": [
+    -24.53,
+    1.5,
+    8.2
+   ],
+   "drenajZayif": false,
+   "anaYol": true
+  },
+  {
+   "id": "b3_yol2",
+   "ad": "Yeni Rektörlük Binası yolu (2)",
+   "konum": [
+    -3.01,
+    1.5,
+    -58.41
+   ],
+   "drenajZayif": true,
+   "anaYol": true
+  },
+  {
+   "id": "b3_yol3",
+   "ad": "Yeni Rektörlük Binası yolu (3)",
+   "konum": [
+    51.8,
+    1.5,
+    -44.17
+   ],
+   "drenajZayif": true,
+   "anaYol": false
+  },
+  {
+   "id": "b3_yol4",
+   "ad": "Yeni Rektörlük Binası yolu (4)",
+   "konum": [
+    -64.36,
+    1.5,
+    52.81
+   ],
+   "drenajZayif": false,
+   "anaYol": true
+  },
+  {
+   "id": "b3_yol5",
+   "ad": "Üniversite binası (5) yolu (5)",
+   "konum": [
+    13.29,
+    1.5,
+    -125.64
+   ],
+   "drenajZayif": true,
+   "anaYol": true
+  },
+  {
+   "id": "b3_yol6",
+   "ad": "Bilimsel ve Teknolojik Araştırma Merkezi yolu (6)",
+   "konum": [
+    -130.62,
+    1.5,
+    30.26
+   ],
+   "drenajZayif": false,
+   "anaYol": true
+  },
+  {
+   "id": "b3_yol7",
+   "ad": "Üniversite binası (5) yolu (7)",
+   "konum": [
+    -24.15,
+    1.5,
+    -184.61
+   ],
+   "drenajZayif": true,
+   "anaYol": true
+  },
+  {
+   "id": "b3_yol8",
+   "ad": "Bilimsel ve Teknolojik Araştırma Merkezi yolu (8)",
+   "konum": [
+    -196.88,
+    1.5,
+    7.68
+   ],
+   "drenajZayif": true,
+   "anaYol": true
+  },
+  {
+   "id": "b3_yol9",
+   "ad": "Üniversite binası (5) yolu (9)",
+   "konum": [
+    74.25,
+    1.5,
+    -184.92
+   ],
+   "drenajZayif": false,
+   "anaYol": true
+  },
+  {
+   "id": "b3_yol10",
+   "ad": "Yeni Rektörlük Binası yolu (10)",
+   "konum": [
+    141.25,
+    1.5,
+    -164.66
+   ],
+   "drenajZayif": true,
+   "anaYol": true
+  }
+ ],
+ "poi": [],
+ "diger": {
+  "d0": {
+   "ad": "Aile Hekimliği",
+   "konum": [
+    20.24,
+    9.8,
+    149.25
+   ]
+  },
+  "d1": {
+   "ad": "Bina",
+   "konum": [
+    -110.44,
+    9.8,
+    -64.21
+   ]
+  },
+  "d2": {
+   "ad": "Lojman",
+   "konum": [
+    -101.14,
+    9.8,
+    -6.91
+   ]
+  },
+  "d3": {
+   "ad": "Lojman",
+   "konum": [
+    -123.75,
+    9.8,
+    -33.39
+   ]
+  },
+  "d4": {
+   "ad": "Lojman",
+   "konum": [
+    -81.96,
+    9.8,
+    28.54
+   ]
+  },
+  "d5": {
+   "ad": "Lojman",
+   "konum": [
+    -69.62,
+    9.8,
+    25.95
+   ]
+  },
+  "d6": {
+   "ad": "Lojman",
+   "konum": [
+    -139.09,
+    9.8,
+    246.64
+   ]
+  },
+  "d7": {
+   "ad": "Lojman",
+   "konum": [
+    -89.05,
+    9.8,
+    261.06
+   ]
+  },
+  "d8": {
+   "ad": "Lojman",
+   "konum": [
+    130.37,
+    9.8,
+    90.85
+   ]
+  }
+ }
+}

@@ -1,0 +1,371 @@
+{
+ "binalar": {
+  "b375603101": [
+   60.32,
+   16.0,
+   -154.43
+  ],
+  "b375603107": [
+   -40.4,
+   12.2,
+   -80.62
+  ],
+  "b375603108": [
+   -11.94,
+   19.8,
+   99.29
+  ],
+  "b375603109": [
+   69.43,
+   19.8,
+   128.95
+  ],
+  "b375603110": [
+   50.49,
+   19.8,
+   55.57
+  ],
+  "b375603112": [
+   -88.17,
+   19.8,
+   9.69
+  ],
+  "b375603113": [
+   -31.66,
+   19.8,
+   187.24
+  ],
+  "b375603114": [
+   32.14,
+   19.8,
+   209.8
+  ],
+  "b375603124": [
+   77.7,
+   8.4,
+   -222.37
+  ],
+  "b375603125": [
+   63.83,
+   8.4,
+   -204.35
+  ],
+  "esenlik_yemekhane": [
+   -181.79,
+   12.2,
+   -28.82
+  ]
+ },
+ "yolNoktalari": [
+  {
+   "id": "b6_yol1",
+   "ad": "Yabancı Diller Yüksekokulu yolu (1)",
+   "konum": [
+    -64.72,
+    1.5,
+    60.28
+   ],
+   "drenajZayif": false,
+   "anaYol": false
+  },
+  {
+   "id": "b6_yol2",
+   "ad": "Merkezi Amfi yolu (2)",
+   "konum": [
+    9.2,
+    1.5,
+    -104.38
+   ],
+   "drenajZayif": true,
+   "anaYol": false
+  },
+  {
+   "id": "b6_yol3",
+   "ad": "Mühendislik (1) yolu (3)",
+   "konum": [
+    -42.35,
+    1.5,
+    110.66
+   ],
+   "drenajZayif": false,
+   "anaYol": false
+  },
+  {
+   "id": "b6_yol4",
+   "ad": "Yabancı Diller Yüksekokulu yolu (4)",
+   "konum": [
+    -131.13,
+    1.5,
+    38.14
+   ],
+   "drenajZayif": false,
+   "anaYol": false
+  },
+  {
+   "id": "b6_yol5",
+   "ad": "Merkezi Amfi yolu (5)",
+   "konum": [
+    -57.9,
+    1.5,
+    -124.34
+   ],
+   "drenajZayif": true,
+   "anaYol": false
+  },
+  {
+   "id": "b6_yol6",
+   "ad": "Üniversite binası (1) yolu (6)",
+   "konum": [
+    2.46,
+    1.5,
+    149.71
+   ],
+   "drenajZayif": false,
+   "anaYol": false
+  },
+  {
+   "id": "b6_yol7",
+   "ad": "Mühendislik (3) yolu (7)",
+   "konum": [
+    181.3,
+    1.5,
+    25.85
+   ],
+   "drenajZayif": true,
+   "anaYol": true
+  },
+  {
+   "id": "b6_yol8",
+   "ad": "Mühendislik (3) yolu (8)",
+   "konum": [
+    158.54,
+    1.5,
+    92.04
+   ],
+   "drenajZayif": true,
+   "anaYol": true
+  },
+  {
+   "id": "b6_yol9",
+   "ad": "Merkezi Amfi yolu (9)",
+   "konum": [
+    -79.85,
+    1.5,
+    -166.65
+   ],
+   "drenajZayif": false,
+   "anaYol": true
+  },
+  {
+   "id": "b6_yol10",
+   "ad": "Merkezi Amfi yolu (10)",
+   "konum": [
+    -136.65,
+    1.5,
+    -125.75
+   ],
+   "drenajZayif": false,
+   "anaYol": true
+  }
+ ],
+ "poi": [
+  {
+   "ad": "Botanik Kafe",
+   "e": "☕",
+   "not": null,
+   "konum": [
+    13.05,
+    7.5,
+    -38.67
+   ]
+  },
+  {
+   "ad": "Ohannes Burger",
+   "e": "🍔",
+   "not": "Hamburger restoranı · Mühendislik Fak. A Blok · Google 4,7 (213 yorum)",
+   "konum": [
+    30.85,
+    7.5,
+    29.63
+   ]
+  }
+ ],
+ "diger": {
+  "d0": {
+   "ad": "Matbaa",
+   "konum": [
+    23.3,
+    13.0,
+    -128.37
+   ]
+  },
+  "d1": {
+   "ad": "Kapalı Spor Salonu",
+   "konum": [
+    -39.46,
+    13.0,
+    -290.16
+   ]
+  },
+  "d2": {
+   "ad": "Bina",
+   "konum": [
+    282.45,
+    9.8,
+    26.83
+   ]
+  },
+  "d3": {
+   "ad": "Bina",
+   "konum": [
+    229.5,
+    13.0,
+    35.33
+   ]
+  },
+  "d4": {
+   "ad": "Bina",
+   "konum": [
+    214.16,
+    13.0,
+    100.12
+   ]
+  },
+  "d5": {
+   "ad": "Bina",
+   "konum": [
+    196.55,
+    13.0,
+    174.48
+   ]
+  },
+  "d6": {
+   "ad": "Bina",
+   "konum": [
+    -225.05,
+    13.0,
+    81.17
+   ]
+  },
+  "d7": {
+   "ad": "Lojman",
+   "konum": [
+    -35.12,
+    9.8,
+    239.83
+   ]
+  },
+  "d8": {
+   "ad": "Bina",
+   "konum": [
+    -16.25,
+    9.8,
+    249.73
+   ]
+  },
+  "d9": {
+   "ad": "Lojman",
+   "konum": [
+    -273.2,
+    9.8,
+    90.6
+   ]
+  },
+  "d10": {
+   "ad": "Lojman",
+   "konum": [
+    -69.37,
+    9.8,
+    51.87
+   ]
+  },
+  "d11": {
+   "ad": "Lojman",
+   "konum": [
+    66.85,
+    9.8,
+    -76.8
+   ]
+  },
+  "d12": {
+   "ad": "Lojman",
+   "konum": [
+    -149.16,
+    9.8,
+    -171.21
+   ]
+  },
+  "d13": {
+   "ad": "Lojman",
+   "konum": [
+    -121.83,
+    9.8,
+    -181.76
+   ]
+  },
+  "d14": {
+   "ad": "Bina",
+   "konum": [
+    -153.13,
+    13.0,
+    -197.12
+   ]
+  },
+  "d15": {
+   "ad": "Lojman",
+   "konum": [
+    -120.07,
+    9.8,
+    -199.67
+   ]
+  },
+  "d16": {
+   "ad": "Lojman",
+   "konum": [
+    -185.74,
+    9.8,
+    -226.63
+   ]
+  },
+  "d17": {
+   "ad": "Bina",
+   "konum": [
+    131.99,
+    13.0,
+    -258.35
+   ]
+  },
+  "d18": {
+   "ad": "Lojman",
+   "konum": [
+    152.6,
+    9.8,
+    -249.82
+   ]
+  },
+  "d19": {
+   "ad": "Bina",
+   "konum": [
+    159.06,
+    9.8,
+    -220.24
+   ]
+  },
+  "poi_botanik": {
+   "ad": "Botanik Kafe",
+   "konum": [
+    13.0,
+    8,
+    -38.67
+   ]
+  },
+  "poi_ohannes": {
+   "ad": "Ohannes Burger",
+   "konum": [
+    30.84,
+    8,
+    29.65
+   ]
+  }
+ }
+}

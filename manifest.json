@@ -1,0 +1,35 @@
+{
+    "name": "İnönü Kampüs İkizi",
+    "short_name": "Kampüs İkizi",
+    "start_url": ".",
+    "display": "fullscreen",
+    "background_color": "#16263F",
+    "theme_color": "#1B3A6B",
+    "description": "İnönü Üniversitesi yeşil kampüs dijital ikizi: 3B kampüs, karbon ve sürdürülebilirlik simülasyonu (COP31).",
+    "orientation": "any",
+    "prefer_related_applications": false,
+    "icons": [
+        {
+            "src": "icons/Icon-192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "icons/Icon-512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        },
+        {
+            "src": "icons/Icon-maskable-192.png",
+            "sizes": "192x192",
+            "type": "image/png",
+            "purpose": "maskable"
+        },
+        {
+            "src": "icons/Icon-maskable-512.png",
+            "sizes": "512x512",
+            "type": "image/png",
+            "purpose": "maskable"
+        }
+    ]
+}
